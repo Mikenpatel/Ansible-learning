@@ -8,5 +8,11 @@ pipeline {
       }
     }
 
+    stage('Ansible-Playbook') {
+      steps {
+        ansiblePlaybook 'docker.yml'
+      }
+    }
+
   }
 }

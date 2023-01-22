@@ -4,6 +4,7 @@ pipeline {
     stage('git checkout') {
       steps {
         sh 'echo "Hello Rahi"'
+        git(url: 'https://github.com/Mikenpatel/Ansible-learning', branch: 'main')
       }
     }
 

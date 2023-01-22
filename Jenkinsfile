@@ -14,6 +14,9 @@ pipeline {
     }
 
     stage('Ansible-Playbook') {
+      environment {
+        name = 'Miken'
+      }
       steps {
         ansiblePlaybook 'docker.yml'
       }

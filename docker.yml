@@ -11,3 +11,6 @@
       docker_container:
         name: tomcat
         image: tomcat
+    - name: using lookup pluging
+      debug:
+        msg: "My name is {{ lookup('env','name') }}"

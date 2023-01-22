@@ -1,0 +1,13 @@
+---
+- name: docker
+  hosts: node2
+  become: yes
+  tasks:
+    - name: Start docker service
+      service:
+        name: docker
+        state: started
+    - name: using docker container module
+      docker_container:
+        name: tomcat
+        image: tomcat
